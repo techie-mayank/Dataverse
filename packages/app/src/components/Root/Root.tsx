@@ -27,7 +27,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { MyGroupsSidebarItem } from '@backstage/plugin-org';
 import GroupIcon from '@material-ui/icons/People';
-import { Administration } from '@backstage-community/plugin-rbac';
+import SecurityIcon from '@material-ui/icons/Security';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -91,7 +91,11 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
         icon={<UserSettingsSignInAvatar />}
         to="/settings"
       >
-        <Administration />
+      <SidebarItem
+        icon={SecurityIcon}
+        to="/rbac"
+        text="Access Control"
+      />
         <SidebarSettings />
       </SidebarGroup>
     </Sidebar>
